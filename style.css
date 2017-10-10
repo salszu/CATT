@@ -12,6 +12,11 @@ body {
 	src: url('images/Tallys.otf') format('opentype');
 }
 
+#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+} 
 
 #container {
 	background: url(images/top-bar.png) top repeat-x;
@@ -72,11 +77,63 @@ body {
 		font: 24px Tallys, Georgia, Serif; letter-spacing: 4px; color: #afada2; 
 		text-shadow: 0px 1px 0px #fff;
 	}
-
+	
 #content {
 	width: 917px; margin: -240px auto 0 auto; padding: 280px 22px 0 22px;
 	background: url(images/container-lines.png) repeat-y;
 }	
+
+/* Overflow hidden breaks about image, switch to clearfix */
+	#content:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	#content h2 {
+		font: 34px Tallys, Georgia, Serif; letter-spacing: 3px; color: #6c695e; 
+		text-shadow: 0px 1px 0px #fff; margin: 0 0 30px 0;
+	}
+
+	#content h3 {
+		font: 28px Tallys, Georgia, Serif; letter-spacing: 3px; color: #6c695e; 
+		text-shadow: 0px 1px 0px #fff; margin: 0 0 15px 0;
+	}
+
+	#content h4 {
+		font: 22px Tallys, Georgia, Serif; letter-spacing: 3px; color: #6c695e; 
+		text-shadow: 0px 1px 0px #fff; margin: 0 0 15px 0;
+	}
+
+	#content p {
+		color: #474747; margin: 0 0 30px 0;
+	}
+
+	#content a {
+		color: #88344b; text-decoration: none; text-shadow: 0px 1px 0px #fff;
+	}
+		#content a:hover {
+			color: #5c1629;
+		}
+
+	#content ul, #content ol {
+		margin: 0 0 30px 0; color: #474747; list-style-position: inside;
+	}
+
+	#content .video {
+		background: url(images/lines.png); width: 648px; padding: 20px 18px; text-align: center;
+		margin: 0 auto 30px auto;
+	}
+		 #content #main .post img {
+		 	display: block; background: url(images/lines.png); padding: 20px 18px; text-align: center;
+		 	margin: 0 auto;
+		 }
+
+	#content blockquote {
+		background: url(images/lines.png); padding: 20px 18px 0 20px;
+		overflow: hidden; margin: 0 0 30px 0;
+	}
+	
 
 	#content #main {
 		width: 684px; float: left; 
@@ -131,8 +188,26 @@ body {
 					float: right; text-align: right; padding: 14px 46px 0 0;
 					background-position: 0 -47px;
 				}
-
-#content #side {
+	
+			#content a#profile-pic {
+				display: block; width: 388px; height: 533px; float: left; margin: 0 30px 60px -48px;
+				background: url(images/chrisspooner.jpg); text-indent: -9999px;
+			}
+				#content a#profile-pic:hover {
+					margin: -3px 30px 63px -48px;
+				}
+				
+			
+			#content #main #share, #content #main #similar {
+				background: url(images/lines.png); padding: 20px 18px;
+				margin: 0 0 30px 0;
+			}	
+				
+				#content #main #similar ul li {
+					font-size: 16px; list-style: none; margin: 0 0 10px 0;
+				}
+	
+	#content #side {
 		width: 196px; float: left; margin: 0 0 0 37px;
 	}
 	
@@ -181,6 +256,8 @@ body {
 				#content #side #my-sites dl dd {
 					font-size: 14px; color: #bcbbb5; margin: 0 0 10px 0;
 				}
+	
+	
 #footer-container {
 	background: #2f2f28 url(images/footer-bg.png);
 }	
@@ -237,3 +314,68 @@ body {
 					#footer #latest-posts ul li.subscribe a:hover {
 						color: #d0cfc8;
 					}
+					
+	#footer #music {
+		width: 278px; float: left; margin: 0 0 30px 22px;
+	}	
+		#footer #music img {
+			width: 75px; height: 75px; border: 3px solid #262620; margin: 0 11px 11px 0;
+			background: #000;
+		}	
+	
+	#footer #socialize {
+		width: 165px; float: left; margin: 0 0 30px 22px;
+	}
+		#footer #socialize ul {
+			list-style: none;
+		}
+			#footer #socialize ul li {
+				float: left; 
+			}
+				#footer #socialize ul li a {
+					display: block; width: 24px; height: 24px; margin: 0 22px 22px 0;
+					background: url(images/social-icons.png); text-indent: -9999px;
+				}
+					#footer #socialize ul li.twitter a { background-position: 0 0; }
+					#footer #socialize ul li.facebook a { background-position: -24px 0; }
+					#footer #socialize ul li.youtube a { background-position: -48px 0; }
+					#footer #socialize ul li.dribbble a { background-position: -72px 0; margin-right: 0; }
+					#footer #socialize ul li.behance a { background-position: -96px 0; }
+					#footer #socialize ul li.tumblr a { background-position: -120px 0; }
+					#footer #socialize ul li.flickr a { background-position: -144px 0; }
+					#footer #socialize ul li.lastfm a { background-position: -168px 0; margin-right: 0; }
+					#footer #socialize ul li.stumbleupon a { background-position: -192px 0; }
+					#footer #socialize ul li.digg a { background-position: -216px 0; }
+					#footer #socialize ul li.designbump a { background-position: -240px 0; }
+					#footer #socialize ul li.vimeo a { background-position: -264px 0; margin-right: 0; }
+				
+					#footer #socialize ul li.twitter a:hover { background-position: 0 -24px; }
+					#footer #socialize ul li.facebook a:hover { background-position: -24px -24px; }
+					#footer #socialize ul li.youtube a:hover { background-position: -48px -24px; }
+					#footer #socialize ul li.dribbble a:hover { background-position: -72px -24px; }
+					#footer #socialize ul li.behance a:hover { background-position: -96px -24px; }
+					#footer #socialize ul li.tumblr a:hover { background-position: -120px -24px; }
+					#footer #socialize ul li.flickr a:hover { background-position: -144px -24px; }
+					#footer #socialize ul li.lastfm a:hover { background-position: -168px -24px; }
+					#footer #socialize ul li.stumbleupon a:hover { background-position: -192px -24px; }
+					#footer #socialize ul li.digg a:hover { background-position: -216px -24px; }
+					#footer #socialize ul li.designbump a:hover { background-position: -240px -24px; }
+					#footer #socialize ul li.vimeo a:hover { background-position: -264px -24px; }
+					
+		
+	#footer #photos {
+		width: 465px; float: left; margin: 0 0 30px 22px;
+	}
+		#footer #photos a {
+			width: 75px; height: 75px; float: left; overflow: hidden;
+			border: 3px solid #262620; margin: 0 11px 11px 0; 
+			background: #000;
+		}	
+			#footer #photos img {
+				margin: -40px 0 0 -60px;
+			}
+	
+	#footer p#back-top {
+		clear: both; text-align: right;
+		font: 11px Georgia, Serif; letter-spacing: 2px; color: #eeede6;
+	}
